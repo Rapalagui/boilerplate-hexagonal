@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.3'
+}
+
+jar {
+    enabled = false
+}
+
+dependencies {
+    implementation project(':application')
+    implementation project(':domain')
+    implementation project(':infrastructure:adapter-rest-api')
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    annotationProcessor 'org.mapstruct:mapstruct-processor'
+    annotationProcessor 'org.projectlombok:lombok-mapstruct-binding'
+
+    implementation project(':application')
+    implementation project(':domain')
+    implementation 'com.google.code.gson:gson'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'org.mapstruct:mapstruct'
+    implementation 'org.slf4j:slf4j-api'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    testImplementation platform('org.junit:junit-bom')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

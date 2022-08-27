@@ -1,0 +1,5 @@
+rootProject.name = 'boilerplate-hexagonal'
+include 'application'
+include 'bootloader'
+include 'domain'
+include 'infrastructure:adapter-rest-api'
